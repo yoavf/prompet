@@ -1,0 +1,30 @@
+{
+  "base_model": "Qwen/Qwen3-VL-8B-Instruct",
+  "sft_lora_checkpoint": "../v1/models/checkpoints/checkpoint-3396",
+  "version": "v2",
+  "model_lineage": "generator",
+  "training_mode": "rl",
+  "quantization": {
+    "load_in_4bit": true,
+    "bnb_4bit_compute_dtype": "bfloat16",
+    "bnb_4bit_use_double_quant": true,
+    "bnb_4bit_quant_type": "nf4"
+  },
+  "grpo_training": {
+    "num_generations": 5,
+    "max_steps": 40,
+    "learning_rate": 1e-06,
+    "batch_size": 1,
+    "gradient_accumulation_steps": 1,
+    "max_new_tokens": 2048,
+    "temperature": 0.7,
+    "save_steps": 5,
+    "image_size": 512,
+    "lr_scheduler_type": "constant"
+  },
+  "scoring": {
+    "temperature": 0.2
+  },
+  "prompt": "Generate an svg illustration of a pet - output svg code only",
+  "critique_model_path": "../../critique/v1/models/final"
+}

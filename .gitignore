@@ -1,0 +1,106 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Models and checkpoints (too large for git)
+versions/critique/*/models/
+versions/generator/*/models/
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+
+# Training outputs
+versions/critique/*/training.log
+versions/generator/*/training.log
+versions/critique/*/samples/
+versions/generator/*/samples/
+versions/critique/*/test_reviews/
+versions/generator/*/test_reviews/
+versions/critique/*/test_reviews_comparison/
+versions/generator/*/test_reviews_comparison/
+versions/critique/*/training_samples/
+versions/generator/*/training_samples/
+
+# HuggingFace cache
+hf-cache/
+.cache/
+
+# Weights & Biases
+wandb/
+
+# RunPod configuration (contains SSH credentials)
+.runpod_pet_config.json
+
+# SSH keys
+*.pem
+id_rsa
+id_ed25519
+*.key
+
+# Environment variables
+.env
+.env.local
+
+# Datasets (may be large or proprietary)
+versions/critique/*/images/*.png
+versions/critique/*/images/*.jpg
+versions/generator/*/images/*.png
+versions/generator/*/images/*.jpg
+versions/critique/*/test_images/*.png
+versions/critique/*/test_images/*.jpg
+versions/generator/*/test_images/*.png
+versions/generator/*/test_images/*.jpg
+
+# Keep structure but ignore content
+!versions/critique/*/images/.gitkeep
+!versions/generator/*/images/.gitkeep
+!versions/critique/*/test_images/.gitkeep
+!versions/generator/*/test_images/.gitkeep
+!versions/critique/*/models/.gitkeep
+!versions/generator/*/models/.gitkeep
+!versions/critique/*/samples/.gitkeep
+!versions/generator/*/samples/.gitkeep
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.backup
+CLAUDE.md

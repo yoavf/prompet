@@ -1,0 +1,7 @@
+{
+  "version": "v7",
+  "base_model": "Qwen/Qwen3-VL-8B-Instruct",
+  "training_mode": "rl",
+  "trained_at": "2025-11-16T17:27:17.508868+00:00Z",
+  "status": "completed"
+}

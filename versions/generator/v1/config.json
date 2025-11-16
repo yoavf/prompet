@@ -1,0 +1,22 @@
+{
+  "base_model": "Qwen/Qwen3-VL-8B-Instruct",
+  "version": "v1",
+  "model_lineage": "generator",
+  "training_mode": "sft",
+  "quantization": {
+    "load_in_4bit": true,
+    "bnb_4bit_compute_dtype": "bfloat16",
+    "bnb_4bit_use_double_quant": true,
+    "bnb_4bit_quant_type": "nf4"
+  },
+  "sft_training": {
+    "num_epochs": 3,
+    "learning_rate": 2e-05,
+    "batch_size": 1,
+    "gradient_accumulation_steps": 1,
+    "max_seq_length": 2448,
+    "save_steps": 100,
+    "warmup_steps": 10,
+    "lr_scheduler_type": "cosine"
+  }
+}
